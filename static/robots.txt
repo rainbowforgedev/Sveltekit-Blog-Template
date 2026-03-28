@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gebna.gg/sitemap.xml
+Sitemap: https://bahaazidan.com/sitemap.xml

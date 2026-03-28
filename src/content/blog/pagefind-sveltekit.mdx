@@ -48,7 +48,7 @@ Pagefind can only process HTML files. So we need to run the indexing script afte
 
 ```json title="package.json" {5}
 {
-	"name": "gebna.gg",
+	"name": "bahaazidan.com",
 	"type": "module",
 	"scripts": {
 		"build": "vite build && pagefind --site \"build\""
@@ -96,7 +96,7 @@ Pagefind provides a [prebuilt search UI](https://pagefind.app/docs/) out of the 
 	<input
 		type="text"
 		placeholder="search"
-		class="input input-bordered input-lg"
+		class="input-bordered input input-lg"
 		bind:value={searchValue}
 	/>
 
@@ -105,7 +105,7 @@ Pagefind provides a [prebuilt search UI](https://pagefind.app/docs/) out of the 
 	{:then results}
 		{#each results as result (result.url)}
 			<div class="flex flex-col gap-1">
-				<a href={result.url.replace('.html', '')} class="link-hover text-sm font-bold">
+				<a href={result.url.replace('.html', '')} class="text-sm font-bold link-hover">
 					{result.meta.title}
 				</a>
 				<div class="text-xs">{@html result.excerpt}</div>
