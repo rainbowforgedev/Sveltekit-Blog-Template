@@ -9,7 +9,7 @@ I just spent a couple hours porting this blog from Astro to SvelteKit.
 
 ## Why ?
 
-If you're happy with Astro, I'm not here to change your mind. But I genuinly think that SvelteKit is the better framework for content websites like this blog. I know the number of lines of code isn't always an indicator of code quality but I can't help but ogle at the fact that porting the same website with **_the exact same features_** from Astro to SvelteKit resulted in almost 50% less lines of code. Basically, Svelte allows you to do everything Astro does (and more) while writing way less code. Here's the [migration PR](https://github.com/BahaaZidan/gebna.gg/pull/1) to prove it.
+If you're happy with Astro, I'm not here to change your mind. But I genuinly think that SvelteKit is the better framework for content websites like this blog. I know the number of lines of code isn't always an indicator of code quality but I can't help but ogle at the fact that porting the same website with **_the exact same features_** from Astro to SvelteKit resulted in almost 50% less lines of code. Basically, Svelte allows you to do everything Astro does (and more) while writing way less code. Here's the [migration PR](https://github.com/BahaaZidan/bahaazidan.com/pull/1) to prove it.
 ![delta lines of code](/content/blog-from-scratch-using-sveltekit/screen-0.webp)
 
 The resulting build (including assets) in both frameworks was around 12mb. SvelteKit somehow improved my lighthouse score from 80s and 90s to 100s across the board. I suspect it has to do with Astro's islands not being as lightweight as advertized.
@@ -668,4 +668,4 @@ Pay attention to the highlighted line. Becuase the RSS standard doesn't allow fo
 
 ## Results
 
-This blog. Yes, the one you're reading rightnow, is completely open source. You can read the complete code yourself on [GitHub](https://github.com/BahaaZidan/gebna.gg). Feel free to fork it or just copy the code into your project if you want. Enjoy ✌️ 🍉
+This blog. Yes, the one you're reading rightnow, is completely open source. You can read the complete code yourself on [GitHub](https://github.com/BahaaZidan/bahaazidan.com). Feel free to fork it or just copy the code into your project if you want. Enjoy ✌️ 🍉
