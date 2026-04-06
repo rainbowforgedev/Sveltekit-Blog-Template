@@ -9,7 +9,7 @@ I just spent a couple hours porting this blog from Astro to SvelteKit.
 
 ## Why ?
 
-If you're happy with Astro, I'm not here to change your mind. But I genuinly think that SvelteKit is the better framework for content websites like this blog. I know the number of lines of code isn't always an indicator of code quality but I can't help but ogle at the fact that porting the same website with **_the exact same features_** from Astro to SvelteKit resulted in almost 50% less lines of code. Basically, Svelte allows you to do everything Astro does (and more) while writing way less code. Here's the [migration PR](https://github.com/BahaaZidan/bahaazidan.com/pull/1) to prove it.
+If you're happy with Astro, I'm not here to change your mind. But I genuinly think that SvelteKit is the better framework for content websites like this blog. I know the number of lines of code isn't always an indicator of code quality but I can't help but ogle at the fact that porting the same website with **_the exact same features_** from Astro to SvelteKit resulted in almost 50% less lines of code. Basically, Svelte allows you to do everything Astro does (and more) while writing way less code. Here's the [migration PR](https://github.com/BahaaZidan/io.bahaazidan.com/pull/1) to prove it.
 ![delta lines of code](/content/blog-from-scratch-using-sveltekit/screen-0.webp)
 
 The resulting build (including assets) in both frameworks was around 12mb. SvelteKit somehow improved my lighthouse score from 80s and 90s to 100s across the board. I suspect it has to do with Astro's islands not being as lightweight as advertized.
@@ -173,7 +173,7 @@ export const load: PageServerLoad = () => {
 {/each}
 ```
 
-In addition to Tailwind, I'm using [DaisyUI](https://daisyui.com/components/card/) for styling. But it's up to your preference. You can see this list in action [here](https://bahaazidan.com/).
+In addition to Tailwind, I'm using [DaisyUI](https://daisyui.com/components/card/) for styling. But it's up to your preference. You can see this list in action [here](https://io.bahaazidan.com/).
 
 ### 7- Let's create the page for an individual post
 
@@ -296,7 +296,7 @@ export const load: PageServerLoad = async ({ params }) => {
 
 1. `rehype-slug` gives an html id attribute to all the heading elements in a post. (h1, h2, ...)
 2. `rehype-autolink-headings` wraps these headers in an anchor tag. Allowing us to link to specific sections in a page.
-3. `rehype-pretty-code` super charges our code blocks with beautiful and context aware syntax highlighting. I showcased some of its capabilities in a [previous post](https://bahaazidan.com/blog/supercharge-code-blocks-astro-js).
+3. `rehype-pretty-code` super charges our code blocks with beautiful and context aware syntax highlighting. I showcased some of its capabilities in a [previous post](https://io.bahaazidan.com/blog/supercharge-code-blocks-astro-js).
 4. `@rehype-pretty/transformers` gives us a dead simple "Copy" button whenver a reader hovers over a code block.
 5. `rehype-pretty-code` is unstyled. All it does is add some html data attributes to our code. We can target these data attributes and style them using tailwind:
 
@@ -522,7 +522,7 @@ How can search engines know where to look for our sitemap.xml file? We need a ro
 User-agent: *
 Allow: /
 
-Sitemap: https://bahaazidan.com/sitemap.xml
+Sitemap: https://io.bahaazidan.com/sitemap.xml
 ```
 
 ### 11- The `<head>` tag
@@ -668,4 +668,4 @@ Pay attention to the highlighted line. Becuase the RSS standard doesn't allow fo
 
 ## Results
 
-This blog. Yes, the one you're reading rightnow, is completely open source. You can read the complete code yourself on [GitHub](https://github.com/BahaaZidan/bahaazidan.com). Feel free to fork it or just copy the code into your project if you want. Enjoy ✌️ 🍉
+This blog. Yes, the one you're reading rightnow, is completely open source. You can read the complete code yourself on [GitHub](https://github.com/BahaaZidan/io.bahaazidan.com). Feel free to fork it or just copy the code into your project if you want. Enjoy ✌️ 🍉

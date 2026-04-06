@@ -32,19 +32,19 @@ export async function GET() {
 	const feed = new Feed({
 		title: 'Gebna blog',
 		description: "Gebna, GebnaTorky, or Bahaa Zidan's Blog",
-		id: 'https://bahaazidan.com/',
-		link: 'https://bahaazidan.com/',
+		id: 'https://io.bahaazidan.com/',
+		link: 'https://io.bahaazidan.com/',
 		language: 'en', // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
-		favicon: 'https://bahaazidan.com/favicon.ico',
+		favicon: 'https://io.bahaazidan.com/favicon.ico',
 		copyright: `Copyright ${new Date().getFullYear().toString()}, Bahaa Zidan / Gebna`,
 		generator: '🍉', // optional, default = 'Feed for Node.js'
 		feedLinks: {
-			rss: 'https://bahaazidan.com/rss.xml',
+			rss: 'https://io.bahaazidan.com/rss.xml',
 		},
 		author: {
 			name: 'Gebna / Bahaa Zidan',
 			email: 'gebnatorky@gmail.com',
-			link: 'https://bahaazidan.com/whoami',
+			link: 'https://io.bahaazidan.com/whoami',
 		},
 		ttl: 60,
 	});
@@ -69,13 +69,13 @@ export async function GET() {
 		feed.addItem({
 			title: article.title,
 			description: article.description,
-			content: `<p>${article.description}</p> <div style="margin-top: 50px; font-style: italic;"> <strong><a href="https://bahaazidan.com${article.path}">Keep reading</a>.</strong> </div> <br /> <br />`,
-			link: `https://bahaazidan.com${article.path}`,
+			content: `<p>${article.description}</p> <div style="margin-top: 50px; font-style: italic;"> <strong><a href="https://io.bahaazidan.com${article.path}">Keep reading</a>.</strong> </div> <br /> <br />`,
+			link: `https://io.bahaazidan.com${article.path}`,
 			author: [
 				{
 					name: 'Gebna / Bahaa Zidan',
 					email: 'gebnatorky@gmail.com',
-					link: 'https://bahaazidan.com/whoami',
+					link: 'https://io.bahaazidan.com/whoami',
 				},
 			],
 			date: new Date(article.publishDate),
@@ -105,19 +105,19 @@ export async function GET() {
 	const feed = new Feed({
 		title: 'Gebna blog',
 		description: "Gebna, GebnaTorky, or Bahaa Zidan's Blog",
-		id: 'https://bahaazidan.com/',
-		link: 'https://bahaazidan.com/',
+		id: 'https://io.bahaazidan.com/',
+		link: 'https://io.bahaazidan.com/',
 		language: 'en', // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
-		favicon: 'https://bahaazidan.com/favicon.ico',
+		favicon: 'https://io.bahaazidan.com/favicon.ico',
 		copyright: `Copyright ${new Date().getFullYear().toString()}, Bahaa Zidan / Gebna`,
 		generator: '🍉', // optional, default = 'Feed for Node.js'
 		feedLinks: {
-			rss: 'https://bahaazidan.com/rss.xml',
+			rss: 'https://io.bahaazidan.com/rss.xml',
 		},
 		author: {
 			name: 'Gebna / Bahaa Zidan',
 			email: 'gebnatorky@gmail.com',
-			link: 'https://bahaazidan.com/whoami',
+			link: 'https://io.bahaazidan.com/whoami',
 		},
 		ttl: 60,
 	});
@@ -127,13 +127,13 @@ export async function GET() {
 		feed.addItem({
 			title: article.title,
 			description: article.description,
-			content: `<p>${article.description}</p> <div style="margin-top: 50px; font-style: italic;"> <strong><a href="https://bahaazidan.com${article.path}">Keep reading</a>.</strong> </div> <br /> <br />`,
-			link: `https://bahaazidan.com${article.path}`,
+			content: `<p>${article.description}</p> <div style="margin-top: 50px; font-style: italic;"> <strong><a href="https://io.bahaazidan.com${article.path}">Keep reading</a>.</strong> </div> <br /> <br />`,
+			link: `https://io.bahaazidan.com${article.path}`,
 			author: [
 				{
 					name: 'Gebna / Bahaa Zidan',
 					email: 'gebnatorky@gmail.com',
-					link: 'https://bahaazidan.com/whoami',
+					link: 'https://io.bahaazidan.com/whoami',
 				},
 			],
 			date: new Date(article.publishDate),

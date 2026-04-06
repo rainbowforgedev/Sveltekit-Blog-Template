@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bahaazidan.com/sitemap.xml
+Sitemap: https://io.bahaazidan.com/sitemap.xml
