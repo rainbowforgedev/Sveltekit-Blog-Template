@@ -55,7 +55,7 @@ body {
 	}
 
 	code {
-		@apply text-sm leading-loose! md:text-base;
+		@apply text-sm leading-loose! wrap-anywhere md:text-base;
 	}
 
 	pre > code {
