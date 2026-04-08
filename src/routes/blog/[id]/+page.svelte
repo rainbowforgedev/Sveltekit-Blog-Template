@@ -200,7 +200,7 @@
 	<section data-pagefind-ignore class="mb-4 flex w-full justify-center p-2">
 		<div class="flex w-full max-w-216 flex-col items-center gap-2">
 			<div class="divider">Related Articles</div>
-			<div class="flex w-full flex-wrap justify-center gap-4">
+			<div class="flex w-full flex-col gap-4">
 				{#each data.recommendations as rec (rec.id)}
 					<PostCard post={rec} />
 				{/each}

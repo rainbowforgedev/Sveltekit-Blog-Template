@@ -49,11 +49,12 @@
 
 <!-- svelte-ignore a11y_interactive_supports_focus -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
-<div class="input hover:cursor-text" role="button" onclick={showAndFocus}>
+<div class="input hidden hover:cursor-text md:inline-flex" role="button" onclick={showAndFocus}>
 	<MagnifyingGlassIcon />
 	<div class="grow">Search</div>
 	<kbd class="kbd">/</kbd>
 </div>
+<button class="btn md:hidden" onclick={showAndFocus}><MagnifyingGlassIcon /></button>
 <dialog bind:this={dialog} class="modal">
 	<div class="modal-box h-144 w-88 border border-base-300 md:w-xl">
 		<div class="flex flex-col gap-4">

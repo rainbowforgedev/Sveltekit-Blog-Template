@@ -16,7 +16,7 @@
 />
 
 <main class="flex flex-col items-center">
-	<section class="my-4 flex max-w-7xl flex-wrap justify-center gap-4">
+	<section class="my-4 flex max-w-4xl flex-col gap-4">
 		{#each data.posts as post (post.id)}
 			<PostCard {post} />
 		{/each}
