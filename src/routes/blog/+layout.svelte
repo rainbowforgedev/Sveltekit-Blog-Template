@@ -12,7 +12,7 @@
 <header class="flex w-full justify-center">
 	<div class="flex w-full max-w-7xl justify-between p-4">
 		<a class="btn font-mono text-lg tracking-widest btn-ghost md:text-2xl" href={resolve('/')}>
-			<img src="/avatar.jpeg" class="size-6 md:size-9" alt="my avatar" />
+			<img src="/avatar.jpeg" class="size-6 rounded-full md:size-9" alt="my avatar" />
 			Bahaa Zidan
 		</a>
 		<Search />
