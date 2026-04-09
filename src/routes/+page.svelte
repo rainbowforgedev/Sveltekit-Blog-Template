@@ -41,7 +41,7 @@
 			</IconContext>
 		</div>
 		<div class="text-secondary-content/80">
-			I'm currently building <span class="font-mono font-bold">Kelma</span>
+			I'm currently building <span class="badge font-mono font-bold">Kelma</span>
 			. A fediverse connected content platform that's built around user intent. So instead of click-baits
 			and adverstisments, it offers a one-press monetization model that is dead-simple for the viewer
 			and much more sustainable for the content creater.
