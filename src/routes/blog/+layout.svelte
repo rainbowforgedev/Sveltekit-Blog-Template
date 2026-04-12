@@ -12,10 +12,14 @@
 
 <header class="flex w-full justify-center">
 	<div class="flex w-full max-w-7xl justify-between p-4">
-		<a class="btn font-mono text-lg tracking-widest btn-ghost md:text-2xl" href={resolve('/')}>
-			<img src="/avatar.jpeg" class="size-6 rounded-full md:size-9" alt="my avatar" />
-			Bahaa Zidan
-		</a>
+		<div class="flex items-center gap-2 font-mono">
+			<a class="inline-flex items-center gap-1 text-lg link-hover md:text-2xl" href={resolve('/')}>
+				<img src="/avatar.jpeg" class="size-6 rounded-full md:size-9" alt="my avatar" />
+				<span>Bahaa Zidan</span>
+			</a>
+			<span class="text-lg md:text-2xl">/</span>
+			<a href={resolve('/blog')} class="text-lg link-hover md:text-2xl">blog</a>
+		</div>
 		<Search />
 	</div>
 </header>
