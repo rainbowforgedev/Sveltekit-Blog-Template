@@ -1,0 +1,40 @@
+---
+title: Why Your GitHub Contributions Disappeared From Your Profile
+description: A simple way to globally change the email used in your commits
+pubDate: '2026-04-14'
+tags: Git,GitHub
+---
+
+A few weeks ago I decided to start moving away from Google products. The immediate target for me was my Gmail. I switched to a different provider and started using my own domain to make sure I can easily switch in the future.
+
+I decided to start switching the most important services from using gmail to using my new email io@bahaazidan.com. One of these services is GitHub. Everything went smoothly then. But today I opened my GitHub profile and noticed that my contributions graph looks like a grey sop story. And even though it's completely meaningless, my brain couldn't take it and I started to investigate.
+
+Turns out GitHub only lists the commits you pushed using an email that is **currently** verified in your account. Keyword here is _currently_. I'd removed the gmail from my GitHub account and that was the reason why my commits disappeared.
+
+The fix is very simple but can be very distructive so proceed with caution. We're going to rewrite the entire git history of a repo. I was only able to do this because most of my recent work has been on solo open source projects that I have full control over. I wouldn't recommend doing this in a repo where you collaborate with other people. Be warned.
+
+The following goes through the entire repo and changes any commit with the old email to the new email.
+
+```bash
+git filter-branch --env-filter '
+OLD_EMAIL="google_is_an_evil_company@gmail.com"
+CORRECT_NAME="BahaaZidan"
+CORRECT_EMAIL="io@bahaazidan.com"
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+fi
+' --tag-name-filter cat -- --branches --tags
+```
+
+Then force push 💀
+
+```bash
+git push --force --tags origin 'refs/heads/*'
+```
